@@ -8,6 +8,7 @@ from FastAPIApp import app  # Main API application
 
 nest_asyncio.apply()
 
+
 class Item(BaseModel):
     name: str
     price: float

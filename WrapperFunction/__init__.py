@@ -1,11 +1,12 @@
 from typing import Union
-
+import nest_asyncio
 import azure.functions as func
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
 from FastAPIApp import app  # Main API application
 
+nest_asyncio.apply()
 
 class Item(BaseModel):
     name: str
@@ -73,4 +74,4 @@ async def delete_item(item_id: int):
 
 
 async def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
-    return await func.AsgiMiddleware(app).handle_async(req, context)
+    return func.AsgiMiddleware(app).handle(req, context)

@@ -2,5 +2,9 @@
 # The Python Worker is managed by Azure Functions platform
 # Manually managing azure-functions-worker may cause unexpected issues
 
-azure-functions
-fastapi
+azure-functions==1.12.0
+fastapi==0.87.0
+pydantic==1.10.2
+
+#For unit testing
+httpx==0.23.1

@@ -78,7 +78,7 @@ API service routes
 
 async def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
     """Each request is redirected to the ASGI handler."""
-    return await func.AsgiMiddleware(app).handle_async(req, context)
+    return func.AsgiMiddleware(app).handle(req, context)
 ```
 
 ## Running the sample

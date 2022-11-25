@@ -128,5 +128,3 @@ Once deployed, test different paths on the deployed URL, using either a browser 
 http://<FunctionAppName>.azurewebsites.net/
 http://<FunctionAppName>.azurewebsites.net/hello/IDNAP
 ```
-
-
